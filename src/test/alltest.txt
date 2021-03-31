@@ -9,6 +9,10 @@ Go to the Writer's Depot: west, 1st left, 1st right, 2nd left, 1st right, 2nd le
 Pickup a passenger going to the Post Office.
 Go to the Post Office: north 1st right, 2nd left, 1st right, 1st right.
 
+
+Switch to plan " Multiplication Station ".
+
+
 [ Addition Alley ]
 "\nSum of 100, 20 and 3: " is waiting at Writer's Depot.
 Go to Writer's Depot: s, 1 r, 1 l, 2 l.
@@ -420,7 +424,70 @@ Pickup a passenger going to Post Office.
 Go to Post Office: west, 1 r, 2 l.
 
 [ Magic Eight ]
+"123 is less than 456: " is waiting at Writer's Depot.
+123 is waiting at Starchild Numerology.
+456 is waiting at Starchild Numerology.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Starchild Numerology: south, 1 l, 1 r, 1 l.
+Pickup a passenger going to Magic Eight.
+Pickup another passenger going to Magic Eight.
+Go to Magic Eight: east, 1 l, 1 r, 1 r, 1 r.
+Switch to plan "Magic Eight false 1" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+Go to Riverview Bridge: south, 2 l, 4 l.
+"true" is waiting at Writer's Depot.
+Go to Writer's Depot: west, 2 l.
+Switch to plan "Magic Eight result 1".
+[Magic Eight false 1]
+"false" is waiting at Writer's Depot.
+Go to Writer's Depot: north, 1 l, 2 l.
+[Magic Eight result 1]
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+
+"\n123 is less than 007: " is waiting at Writer's Depot.
+123 is waiting at Starchild Numerology.
+006 is waiting at Starchild Numerology.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Starchild Numerology: south, 1 l, 1 r, 1 l.
+Pickup a passenger going to Magic Eight.
+Pickup another passenger going to Magic Eight.
+Go to Magic Eight: east, 1 l, 1 r, 1 r, 1 r.
+Switch to plan "Magic Eight false 2" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+Go to Riverview Bridge: south, 2 l, 4 l.
+"true" is waiting at Writer's Depot.
+Go to Writer's Depot: west, 2 l.
+Switch to plan "Magic Eight result 2".
+[Magic Eight false 2]
+"false" is waiting at Writer's Depot.
+Go to Writer's Depot: north, 1 l, 2 l.
+[Magic Eight result 2]
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+
 [ Multiplication Station ]
+"3 times 4 is: " is waiting at Writer's Depot.
+3 is waiting at Starchild Numerology.
+4 is waiting at Starchild Numerology.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Starchild Numerology: south, 1 l, 1 r, 1 l.
+Pickup a passenger going to Multiplication Station.
+Pickup a passenger going to Multiplication Station.
+Go to Multiplication Station: west, 1 r, 2 r, 1 r, 4 l.
+Pickup a passenger going to The Babelfishery.
+Go to The Babelfishery: south, 1 r, 1 l.
+Pickup a passenger going to the Post Office.
+"\n" is waiting at the Writer's Depot.
+Go to Writer's Depot: north, 1 l, 1 l, 2 l.
+Pickup a passenger going to the Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+
+
+
 [ Narrow Path Park ]
 [ Post Office ]
 [ Riverview Bridge ]
@@ -438,7 +505,6 @@ Go to Post Office: west, 1 r, 2 l.
 [ Zoom Zoom ]
 
 Switch to plan "The End".
-
 
 
 [ Post Office ]
