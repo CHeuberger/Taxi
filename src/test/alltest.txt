@@ -1,0 +1,490 @@
+
+    [  A L L T E S T . T X T        ]
+    [  test all Taxi stations       ]
+    [  2010-08-23 Carlos Heuberger  ]
+
+
+"\n========== STARTING TEST ==========\n" is waiting at the Writer's Depot.
+Go to the Writer's Depot: west, 1st left, 1st right, 2nd left, 1st right, 2nd left.
+Pickup a passenger going to the Post Office.
+Go to the Post Office: north 1st right, 2nd left, 1st right, 1st right.
+
+[ Addition Alley ]
+"\nSum of 100, 20 and 3: " is waiting at Writer's Depot.
+Go to Writer's Depot: s, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: n, 1 r, 2 r, 1 l.
+100 is waiting at Starchild Numerology.
+20 is waiting at Starchild Numerology.
+3 is waiting at Starchild Numerology.
+Go to Starchild Numerology: s, 1 r, 1 l, 1 l, 2 l.
+Pickup a passenger going to the Addition Alley.
+Pickup another passenger going to the Addition Alley.
+Pickup another passenger going to the Addition Alley.
+Go to the Addition Alley: w, 1 r, 3 r, 1 r, 1 r.
+Pickup a passenger going to The Babelfishery.
+Go to The Babelfishery: n, 1 r, 1 r.
+Pickup a passenger going to Post Office.
+Go to Post Office: n, 1 l, 1 r.
+
+[ Auctioneer School ]
+"\n" is waiting at the Writer's Depot.
+"Convert to UPPERcase" is waiting at Writer's Depot.
+" -> " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to Cyclone.
+Go to Cyclone: north.
+Pickup a passenger going to Post Office.
+Go to Writer's Depot: south.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+Go to Cyclone: south, 1 r, 1 l, 2 r.
+Pickup a passenger going to the Auctioneer School.
+Go to the Auctioneer School: south, 1 l, 1 r.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 2 r, 1 r, 1 l.
+
+[ Bird's Bench ]
+"Waiting at Bird's Bench" is waiting at Writer's Depot.
+"\n" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to the Bird's Bench.
+Go to the Bird's Bench: north, 1 r, 1 r, 1 r, 1 l.
+Go to Writer's Depot: north, 1 r, 1 l, 1 l, 1 l.
+Pickup a passenger going to Post Office.
+Go to Bird's Bench: south, 1 l, 1 l, 1 l, 1 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 1 l, 1 r, 1 r, 1 l.
+
+[ Charboil Grill ]
+"\nA is " is waiting at Writer's Depot.
+"A" is waiting at Writer's Depot.
+", 66 is " is waiting at Writer's Depot.
+66 is waiting at Starchild Numerology.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to the Charboil Grill.
+Go to the Charboil Grill: south, 1 l.
+Pickup a passenger going to The Babelfishery.
+Go to The Babelfishery: east, 1 l, 1 r, 1 r, 1 r.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 l, 1 r.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Starchild Numerology: south, 1 l, 1 r, 1 l.
+Pickup a passenger going to the Charboil Grill.
+Go to the Charboil Grill: east, 1 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: east, 1 l, 1 r, 1 r, 1 l.
+
+[ Chop Suey ]
+"\nABC breaked up -> " is waiting at Writer's Depot.
+"ABC" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to the Chop Suey.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+Go to the Chop Suey: north, 1 r, 1 l, 4 r, 1 l.
+Pickup a passenger going to Post Office.
+"," is waiting at Writer's Depot.
+"," is waiting at Writer's Depot.
+Go to Writer's Depot: north, 1 l, 3 l.
+Pickup a passenger going to Post Office.
+Go to the Chop Suey: north, 3 r, 3 r.
+Pickup a passenger going to Post Office.
+Go to Post Office: south, 1 r, 1 l, 2 r, 1 l.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Chop Suey: north, 3 r, 3 r.
+Pickup a passenger going to Post Office.
+Go to Post Office: south, 1 r, 1 l, 2 r, 1 l.
+
+[ Collator Express ]
+"\nABC is less than DEF: " is waiting at Writer's Depot.
+"ABC" is waiting at Writer's Depot.
+"DEF" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to the Collator Express.
+Pickup another passenger going to the Collator Express.
+Go to the Collator Express: north, 2 r.
+Switch to plan "collator1 false" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+"true" is waiting at Writer's Depot.
+Switch to plan "collator1 end".
+[collator1 false]
+"false" is waiting at Writer's Depot.
+[collator1 end]
+Go to Writer's Depot: north, 1 l.
+Pickup a passenger going to Post Office.
+Go to Riverview Bridge: north, 3 r.
+Go to Post Office: east, 1 r, 3 r, 1 l.
+
+"\nabc is less than DEF: " is waiting at Writer's Depot.
+"abc" is waiting at Writer's Depot.
+"DEF" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to the Collator Express.
+Pickup another passenger going to the Collator Express.
+Go to the Collator Express: north, 2 r.
+Switch to plan "collator2 false" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+"true" is waiting at Writer's Depot.
+Switch to plan "collator2 end".
+[collator2 false]
+"false" is waiting at Writer's Depot.
+[collator2 end]
+Go to Writer's Depot: north, 1 l.
+Pickup a passenger going to Post Office.
+Go to Riverview Bridge: north, 3 r.
+Go to Post Office: east, 1 r, 3 r, 1 l.
+
+[ Crime Lab ]
+"\nABC, ABC and ABC are equal: " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+"ABC" is waiting at Writer's Depot.
+"ABC" is waiting at Writer's Depot.
+"ABC" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to the Crime Lab.
+Pickup another passenger going to the Crime Lab.
+Pickup another passenger going to the Crime Lab.
+Go to the Crime Lab: north, 1 r, 2 r, 2 l.
+Switch to plan "Crime Lab false 1" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+"true" is waiting at Writer's Depot.
+Go to Riverview Bridge: north, 4 l.
+Go to Writer's Depot: west, 2 l.
+Switch to plan "Crime Lab 1".
+[Crime Lab false 1]
+"false" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 r, 2 l.
+[Crime Lab 1]
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+
+"\nABC, DEF and ABC are equal: " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+"ABC" is waiting at Writer's Depot.
+"DEF" is waiting at Writer's Depot.
+"ABC" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to the Crime Lab.
+Pickup another passenger going to the Crime Lab.
+Pickup another passenger going to the Crime Lab.
+Go to the Crime Lab: north, 1 r, 2 r, 2 l.
+Switch to plan "Crime Lab false 2" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+"true" is waiting at Writer's Depot.
+Go to Riverview Bridge: north, 4 l.
+Go to Writer's Depot: west, 2 l.
+Switch to plan "Crime Lab 2".
+[Crime Lab false 2]
+"false" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+[Crime Lab 2]
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+
+[ Cyclone ]
+"\nDropping ABC and DEF at Cyclone: " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+"ABC" is waiting at Writer's Depot.
+"DEF" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to the Cyclone.
+Pickup another passenger going to the Cyclone.
+Go to the Cyclone: north.
+Pickup a passenger going to Post Office.
+Go to Post Office: south, 1 l, 2 r, 1 l.
+[Cyclone Loop]
+Go to the Cyclone: south, 1 r, 1 l, 2 r.
+Switch to plan "Cyclone End" if no one is waiting.
+", " is waiting at Writer's Depot.
+Go to Writer's Depot: south.
+Pickup a passenger going to Post Office.
+Go to the Cyclone: north.
+Pickup a passenger going to Post Office.
+Go to Post Office: south, 1 l, 2 r, 1 l.
+Switch to plan "Cyclone Loop".
+[Cyclone End]
+Go to Post Office: south, 1 l, 2 r, 1 l.
+
+[ Divide and Conquer ]
+"\n14 divided by 3 and 2: " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+14 is waiting at Starchild Numerology.
+3 is waiting at Starchild Numerology.
+2 is waiting at Starchild Numerology.
+Go to Starchild Numerology: south, 1 r, 1 l, 1 l, 2 l.
+Pickup a passenger going to the Divide and Conquer.
+Pickup another passenger going to the Divide and Conquer.
+Pickup another passenger going to the Divide and Conquer.
+Go to the Divide and Conquer: west, 1 r, 3 r, 1 r, 2 r, 1 r.
+Pickup a passenger going to The Babelfishery.
+Go to The Babelfishery: east, 1 r.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 l, 1 r.
+
+[ Equal's Corner ]
+"\n123, 123 and 123 are equal: " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+123 is waiting at Starchild Numerology.
+123 is waiting at Starchild Numerology.
+123 is waiting at Starchild Numerology.
+Go to Starchild Numerology: south, 1 r, 1 l, 1 l, 2 l.
+Pickup a passenger going to the Equal's Corner.
+Pickup another passenger going to the Equal's Corner.
+Pickup another passenger going to the Equal's Corner.
+Go to the Equal's Corner: west, 1 l.
+Switch to plan "Equal's Corner false 1" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+Go to Riverview Bridge: north, 4 r, 1 r.
+"true" is waiting at Writer's Depot.
+Go to Writer's Depot: west, 2 l.
+Switch to plan "Equal's Corner 1".
+[Equal's Corner false 1]
+"false" is waiting at Writer's Depot.
+Go to Writer's Depot: north, 1 l, 1 r.
+[Equal's Corner 1]
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+"\n123, 123 and 456 are equal: " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+123 is waiting at Starchild Numerology.
+123 is waiting at Starchild Numerology.
+456 is waiting at Starchild Numerology.
+Go to Starchild Numerology: south, 1 r, 1 l, 1 l, 2 l.
+Pickup a passenger going to the Equal's Corner.
+Pickup another passenger going to the Equal's Corner.
+Pickup another passenger going to the Equal's Corner.
+Go to the Equal's Corner: west, 1 l.
+Switch to plan "Equal's Corner false 2" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+Go to Riverview Bridge: north, 4 r, 1 r.
+"true" is waiting at Writer's Depot.
+Go to Writer's Depot: west, 2 l.
+Switch to plan "Equal's Corner 2".
+[Equal's Corner false 2]
+"false" is waiting at Writer's Depot.
+Go to Writer's Depot: north, 1 l, 1 r.
+[Equal's Corner 2]
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+
+[ Firemouth Grill ]
+"\nABCDE in any order: " is waiting at Writer's Depot.
+"A" is waiting at Writer's Depot.
+"B" is waiting at Writer's Depot.
+"C" is waiting at Writer's Depot.
+"D" is waiting at Writer's Depot.
+"E" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to the Firemouth Grill.
+Pickup another passenger going to the Firemouth Grill.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+Go to Firemouth Grill: north, 1 l.
+Go to Writer's Depot: west, 1 l, 1 r, 2 l.
+Pickup a passenger going to Firemouth Grill.
+Pickup another passenger going to Firemouth Grill.
+Pickup another passenger going to Firemouth Grill.
+Go to Firemouth Grill: north, 1 r, 2 l, 1 r.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to Post Office.
+Pickup another passenger going to Post Office.
+Go to Post Office: east, 1 r.
+Go to Firemouth Grill: north, 1 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to Post Office.
+Go to Post Office: east, 1 r.
+
+[ Fueler Up ]
+Go to the Fueler Up: north, 1 r, 1 l.
+Go to Post Office: south, 1 r, 1 l.
+
+[ Go More ]
+Go to the Go More: south, 1 r, 1 l, 1 l, 2 r.
+Go to Post Office: east, 1 l, 1 r, 1 r, 1 l.
+
+[ Heisenberg's ]
+"\nRandom number: " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+Go to Heisenberg's: north, 1 r, 1 l, 4 r, 1 l.
+Pickup a passenger going to The Babelfishery.
+Go to The Babelfishery: south, 1 r, 1 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 l, 1 r.
+
+[ Joyless Park ]
+"\nABCDE in FIFO order: " is waiting at Writer's Depot.
+"A" is waiting at Writer's Depot.
+"B" is waiting at Writer's Depot.
+"C" is waiting at Writer's Depot.
+"D" is waiting at Writer's Depot.
+"E" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to the Joyless Park.
+Pickup another passenger going to the Joyless Park.
+Go to Post Office: north 1 r, 2 r, 1 l.
+Go to the Joyless Park: north, 1 r, 1 l, 3 r.
+Go to Writer's Depot: west, 1 l, 2 r, 1 l, 2 l.
+Pickup a passenger going to the Joyless Park.
+Pickup another passenger going to the Joyless Park.
+Pickup another passenger going to the Joyless Park.
+Go to the Joyless Park: north, 3 r, 2 r, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to Post Office.
+Pickup another passenger going to Post Office.
+Go to Post Office: west, 1 l, 1 r, 1 l.
+Go to the Joyless Park: north, 1 r, 1 l, 3 r.
+[Joyless pickup]
+Pickup another passenger going to Post Office.
+Switch to plan "Joyless empty" if no one is waiting.
+Switch to plan "Joyless pickup".
+[Joyless empty]
+Go to Post Office: west, 1 l, 1 r, 1 l.
+
+[ Knots Landing ]
+"\nInverse of 0: " is waiting at Writer's Depot.
+0 is waiting at Starchild Numerology.
+", inverse of 5: " is waiting at Writer's Depot.
+5 is waiting at Starchild Numerology.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Starchild Numerology: south, 1 l, 1 r, 1 l.
+Pickup a passenger going to the Knots Landing.
+Pickup another passenger going to the Knots Landing.
+Go to Post Office: west, 1 r, 2 r, 1 r, 1 l.
+Go to the Knots Landing: north, 1 r, 1 l, 4 r.
+Pickup a passenger going to The Babelfishery.
+Pickup another passenger going to The Babelfishery.
+Go to The Babelfishery: west, 1 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 l, 1 r.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to The Babelfishery: north, 1 r, 2 r, 1 r.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 l, 1 r.
+
+[ KonKat's ]
+"\nA, B and C together are: " is waiting at Writer's Depot.
+"A" is waiting at Writer's Depot.
+"B" is waiting at Writer's Depot.
+"C" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to the KonKat's.
+Pickup another passenger going to the KonKat's.
+Pickup another passenger going to the KonKat's.
+Go to the KonKat's: north, 3 r, 2 r.
+Pickup a passenger going to Post Office.
+Go to Post Office: south, 3 r, 1 l.
+
+[ Little League Field ]
+"\n" is waiting at the Writer's Depot.
+"Convert to lowerCASE" is waiting at Writer's Depot.
+" -> " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to Cyclone.
+Go to Cyclone: north.
+Pickup a passenger going to Post Office.
+Go to Writer's Depot: south.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+Go to Cyclone: south, 1 r, 1 l, 2 r.
+Pickup a passenger going to the Little League Field.
+Go to the Little League Field: south, 1 l, 2 r, 1 l, 1 r, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: west, 1 r, 2 l.
+
+[ Magic Eight ]
+[ Multiplication Station ]
+[ Narrow Path Park ]
+[ Post Office ]
+[ Riverview Bridge ]
+[ Rob's Rest ]
+[ Rounders Pub ]
+[ Starchild Numerology ]
+[ Sunny Skies Park ]
+[ Taxi Garage ]
+[ The Babelfishery ]
+[ The Underground ]
+[ Tom's Trims ]
+[ Trunkers ]
+[ What's The Difference ]
+[ Writer's Depot ]
+[ Zoom Zoom ]
+
+Switch to plan "The End".
+
+
+
+[ Post Office ]
+"Type some text.\n" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+"You typed: " is waiting at the Writer's Depot.
+Pickup a passenger going to Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+
+
+[ Starchild Numerology ]
+'\nThe number \"123456\": ' is waiting at Writer's Depot.
+123456 is waiting at Starchild Numerology.
+Go to Starchild Numerology: south, 1 r, 1 l, 1 l, 2 l.
+Pickup a passenger going to The Babelfishery.
+Go to Writer's Depot: west, 1 r, 1 l, 1 r.
+Pickup a passenger going to Post Office.
+Go to The Babelfishery: north, 1 r, 2 r, 1 r.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 l, 1 r.
+
+
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Cyclone.
+Go to Cyclone: north.
+Pickup a passenger going to Post Office.
+Go to Writer's Depot: south.
+Pickup a passenger going to Post Office.
+Go to Cyclone: north.
+Pickup a passenger going to Little League Field.
+Go to Post Office: south, 1 l, 2 r, 1 l.
+Go to Little League Field: north, 1 r, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: west, 1 r, 2 l.
+"\n" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+
+
+[The End]
+[ Taxi Garage ]
+Go to Taxi Garage: north, 1 r, 1 l, 1 r.

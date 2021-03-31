@@ -1,0 +1,68 @@
+
+    [  J A V A . T X T              ]
+    [  Taxi test program/Java ONLY  ]
+    [  2010-08-19 Carlos Heuberger  ]
+
+[ not intended to work with original version ]
+
+
+"========== STARTING TEST ==========\n" is waiting at the Writer's Depot.
+Go to the Writer's Depot: west, 1st left, 1st right, 2nd left, 1st right, 2nd left.
+Pickup a passenger going to the Post Office.
+Go to Post Office: north 1st right, 2nd right, 1st left.
+
+
+    [-----  test special characters  -----]
+'An apostrophe \' and a " inside a string.\n' is waiting at Writer's Depot.
+Go to Writer's Depot: south 1st right, 1st left, 2nd left.
+Pickup a passenger going to Post Office.
+Go to Post Office: north 1st right, 2nd right, 1st left.
+
+    [-----  special label  -----]
+Switch to plan "[Special Label]".
+"SPECIAL LABEL NOT WORKING!\n" is waiting at Writer's Depot.
+Switch to plan "Special Label End".
+    [[Special Label]]
+"special label working!\n" is waiting at Writer's Depot.
+    [Special Label End]
+Go to Writer's Depot: south 1st right, 1st left, 2nd left.
+Pickup a passenger going to Post Office.
+Go to Post Office: north 1st right, 2nd right, 1st left.
+
+    [----- Crime Lab -----]
+"\nABC, DEF and ABC are equal: " is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+"ABC" is waiting at Writer's Depot.
+"DEF" is waiting at Writer's Depot.
+"ABC" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to the Crime Lab.
+Pickup another passenger going to the Crime Lab.
+Pickup another passenger going to the Crime Lab.
+Go to the Crime Lab: north, 1 r, 2 r, 2 l.
+Switch to plan "Crime Lab false 2" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+"true." is waiting at Writer's Depot.
+Go to Riverview Bridge: north, 4 l.
+Go to Writer's Depot: west, 2 l.
+Switch to plan "Crime Lab 2".
+[Crime Lab false 2]
+"false!" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+[Crime Lab 2]
+Pickup a passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+"  " is waiting at Writer's Depot.
+"Taxi should be empty" is waiting at Writer's Depot.
+" and so it is!" is waiting at Writer's Depot.
+Go to Writer's Depot: south, 1 r, 1 l, 2 l.
+Pickup a passenger going to Post Office.
+Pickup another passenger going to Post Office.
+Pickup another passenger going to Post Office.
+Go to Post Office: north, 1 r, 2 r, 1 l.
+
+
+    [The End]
+Go to Taxi Garage: north 1st right, 1st left, 1st right.

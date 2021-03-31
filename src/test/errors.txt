@@ -1,0 +1,181 @@
+
+    [  E R R O R S . T X T          ]
+    [  Taxi errors test program     ]
+    [  2011-08-29 Carlos Heuberger  ]
+
+
+Switch to plan "WRITER".
+
+[DIVIDE0]
+"divide by zero at" is waiting at Writer's Depot.
+5 is waiting at Starchild Numerology.
+0 is waiting at Starchild Numerology.
+Go to Starchild Numerology: west 1st left, 1st right, 1st left, 1st right, 1st left, 1st left, 2nd left.
+Pickup a passenger going to Divide and Conquer.
+Pickup a passenger going to Divide and Conquer.
+Go to Divide and Conquer: west 1st right, 2nd right, 1st right, 1st left, 1st right, 1st left, 2nd left.
+Go to Taxi Garage: east 1st right, 3rd left.
+
+[EQUALS]
+"requires at least 2 passengers" is waiting at Writer's Depot.
+Go to Writer's Depot: west 1st left, 1st right, 1st left, 1st right, 1st left, 2nd left.
+Pickup a passenger going to Equal's Corner.
+Go to Equal's Corner: south 1st left, 1st right.
+Go to Taxi Garage: north 3rd right, 1st right, 1st left, 1st right, 1st left, 1st right.
+
+[WRITER]
+999 is waiting at Writer's Depot.
+
+[STAR]
+"cannot be made to wait at" is waiting at Starchild Numerology.
+
+[REST]
+"there is already a passenger waiting at" is waiting at Writer's Depot.
+2 is waiting at Starchild Numerology.
+Go to Starchild Numerology: west 1st left, 1st right, 1st left, 1st right, 1st left, 1st left, 2nd left.
+Pickup a passenger going to Rob's Rest.
+Go to Rob's Rest: west 1st right, 2nd left, 1st right.
+Go to Writer's Depot: south 1st left, 1st left, 1st left, 1st left.
+Pickup a passenger going to Rob's Rest.
+Go to Rob's Rest: north 1st right, 1st right, 1st right, 1st right.
+Go to Taxi Garage: south 1st left, 1st left, 1st right, 1st right, 1st left, 1st right, 1st left, 1st right.
+
+[GAS]
+"text" is waiting at Fueler Up.
+
+[MAGIC]
+"requires two passengers" is waiting at Writer's Depot.
+123 is waiting at Starchild Numerology.
+Go to Starchild Numerology: west 1st left, 1st right, 1st left, 1st right, 1st left, 1st left, 2nd left.
+Pickup a passenger going to Magic Eight.
+Go to Magic Eight: west 1st right, 2nd right, 1st right.
+Go to Taxi Garage: south 1st left, 1st right, 1st left, 1st right.
+
+[NOWAIT]
+"passengers cannot be made to wait at" is waiting at Taxi Garage.
+
+[NOPAX]
+Pickup a passenger going to Taxi Garage.
+
+[CHARBOIL]
+"can only handle strings of length 1" is waiting at Writer's Depot.
+Go to Writer's Depot: west 1st left, 1st right, 1st left, 1st right, 1st left, 2nd left.
+Pickup a passenger going to Charboil Grill.
+Go to Charboil Grill: south 1st left.
+
+[COLLATOR]
+"requires two passengers" is waiting at Writer's Depot.
+Go to Writer's Depot: west 1st left, 1st right, 1st left, 1st right, 1st left, 2nd left.
+Pickup a passenger going to Collator Express.
+Go to Collator Express: north 2nd right.
+
+[CRIME]
+"requires at least 2 passengers" is waiting at Writer's Depot.
+Go to Writer's Depot: west 1st left, 1st right, 1st left, 1st right, 1st left, 2nd left.
+Pickup a passenger going to Crime Lab.
+Go to Crime Lab: north 1st right, 2nd right, 2nd left.
+
+[NOLABEL]
+Switch to plan "no such label".
+
+[FULLTAXI]
+"cannot " is waiting at Writer's Depot.
+"pickup " is waiting at Writer's Depot.
+"more " is waiting at Writer's Depot.
+"passengers" is waiting at Writer's Depot.
+Go to Writer's Depot: west 1st left, 1st right, 1st left, 1st right, 1st left, 2nd left.
+Pickup a passenger going to Post Office.
+Pickup a passenger going to Post Office.
+Pickup a passenger going to Post Office.
+Pickup a passenger going to Post Office.
+Go to Post Office: north 1st right, 2nd right, 1st left.
+Go to Taxi Garage: north 1st right, 1st left, 1st right.
+
+[STREETEND]
+"end of street" is waiting at Writer's Depot.
+Go to Writer's Depot: east.
+
+[NOSTRING]
+"cannot handle non-string values" is waiting at Writer's Depot.
+1 is waiting at Starchild Numerology.
+Go to Writer's Depot: west 1st left, 1st right, 1st left, 1st right, 1st left, 2nd left.
+Pickup a passenger going to Post Office.
+Go to Starchild Numerology: south 1st left, 1st right, 1st left.
+Pickup a passenger going to Auctioneer School.
+Go to Auctioneer School: west 1st right.
+
+[REQNUM]
+"requires a numerical value" is waiting at Writer's Depot.
+Go to Writer's Depot: west 1st left, 1st right, 1st left, 1st right, 1st left, 2nd left.
+Pickup a passenger going to The Underground.
+Go to The Underground: north 1st right, 2nd right, 1st left, 1st right, 1st left.
+
+[NOGAS]
+"out of gas" is waiting at Writer's Depot.
+Go to Writer's Depot: west 1st left, 1st right, 1st left, 1st right, 1st left, 2nd left.
+Pickup a passenger going to Post Office.
+Go to Chop Suey: north 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Multiplication Station: south 1st right, 1st left, 2nd left, 1st right.
+Go to Charboil Grill: south 1st right, 2nd left, 1st left, 2nd right.
+Go to Chop Suey: west 1st right, 3rd right, 3rd right.
+Go to Taxi Garage: south 1st right, 1st left, 3rd left.
