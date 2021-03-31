@@ -7,9 +7,10 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
+import java.awt.RenderingHints;
 import java.awt.Stroke;
+import java.util.Collections;
 import java.util.List;
-
 import javax.swing.JPanel;
 
 import cfh.taxi.Direction;
@@ -134,6 +135,7 @@ public class MapPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D gg = (Graphics2D) g;
+        gg.addRenderingHints(Collections.singletonMap(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC));
         gg.scale(scale, scale);
        
         if (map != null) {
