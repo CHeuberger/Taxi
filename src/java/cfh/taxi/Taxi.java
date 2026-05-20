@@ -15,7 +15,7 @@ import cfh.taxi.Program.Result;
 
 public class Taxi {
 
-    public static final String VERSION = "v0.5 (beta 2018-08-22)";
+    public static final String VERSION = "v0.6 (beta 2026-05-20)";
     
     private final RoadMap map;
     private final InputOutput inpout;
@@ -280,5 +280,19 @@ public class Taxi {
         void lost(Taxi taxi, Location destination);
         
         void outOfFuel(Taxi taxi);
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    public static class Adapter implements Listener {
+        @Override public void drive(Taxi taxi, Direction direction) { }
+        @Override public void move(Taxi taxi, Node from, Node to) { } 
+        @Override public void refuel(Taxi taxi, double quant) { } 
+        @Override public void borded(Taxi taxi, Passenger passenger) { } 
+        @Override public void left(Taxi taxi, List<Passenger> left) { } 
+        @Override public void cash(Taxi taxi, long cash) { } 
+        @Override public void deadEnd(Taxi taxi, Direction direction) { } 
+        @Override public void lost(Taxi taxi, Location destination) { } 
+        @Override public void outOfFuel(Taxi taxi) { } 
     }
 }

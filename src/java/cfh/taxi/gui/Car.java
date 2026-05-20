@@ -14,7 +14,6 @@ import cfh.taxi.Passenger;
 import cfh.taxi.Program;
 import cfh.taxi.RoadMap;
 import cfh.taxi.Taxi;
-import cfh.taxi.TaxiException;
 
 public class Car implements Program.Listener {
     
@@ -28,7 +27,8 @@ public class Car implements Program.Listener {
     private double heading;
     private double tank;
     private int occupation;
-    private Throwable exception;
+    private String exception;
+    private int linenumber = -1;
     
     private Passenger passenger = null;
     private int passengerDelta;
@@ -96,7 +96,12 @@ public class Car implements Program.Listener {
             
             if (exception != null) {
                 tmp.scale(1.0/parent.getScale(), 1.0/parent.getScale());
-                String str = exception.getMessage();
+                String str;
+                if (linenumber > 0) {
+                    str = String.format("%s (line %d)", exception, linenumber);
+                } else {
+                    str = exception;
+                }
                 int tx = -80;
                 int ty = 30;
                 int tw = fm.stringWidth(str);
@@ -257,8 +262,9 @@ public class Car implements Program.Listener {
     }
 
     @Override
-    public void taxiException(TaxiException ex) {
-        exception = ex;
+    public void taxiException(int line, String message) {
+        exception = message;;
+        linenumber = line;
         repaint();
     }
     

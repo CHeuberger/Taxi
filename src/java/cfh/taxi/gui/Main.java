@@ -56,8 +56,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.JToggleButton;
+import javax.swing.event.CaretEvent;
+import javax.swing.event.CaretListener;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.BadLocationException;
@@ -137,6 +140,8 @@ public class Main {
     private final MapPanel mapPanel;
     
     private final JTextArea programText;
+    private final JTextField programLine;
+    private final JTextField programStatus;
     private final InputTextArea inputText;
     private final JTextPane outputText;
     private final JTextArea logText;
@@ -341,20 +346,45 @@ public class Main {
         buttons.add(Box.createHorizontalGlue());
         buttons.add(quit);
         
+        programLine = new JTextField(8);
+        programLine.setEditable(false);
+        
+        programStatus = new JTextField();
+        programStatus.setEditable(false);
+        
         programText = new JTextArea(16, 60);
         programText.setFont(MONOSPACED);
         programText.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void removeUpdate(DocumentEvent e) {
+            private void reset() {
                 program = null;
+                programStatus.setText("");
+                programStatus.setForeground(null);
             }
             @Override
-            public void insertUpdate(DocumentEvent e) {
-                program = null;
+            public void removeUpdate(DocumentEvent ev) {
+                reset();
             }
             @Override
-            public void changedUpdate(DocumentEvent e) {
-                program = null;
+            public void insertUpdate(DocumentEvent ev) {
+                reset();
+            }
+            @Override
+            public void changedUpdate(DocumentEvent ev) {
+                reset();
+            }
+        });
+        programText.addCaretListener(new CaretListener() {
+            @Override
+            public void caretUpdate(CaretEvent ev) {
+                try {
+                    int pos = programText.getCaretPosition();
+                    int line = programText.getLineOfOffset(pos);
+                    programLine.setText(Integer.toString(line+1));
+                } catch (BadLocationException ex) {
+                    ex.printStackTrace();
+                    programLine.setText("");
+                }
+                programStatus.setForeground(null);
             }
         });
         String prg = prefs.get(PREF_PROG_TEXT, "");
@@ -373,6 +403,14 @@ public class Main {
             }
         }
         programText.setText(prg);
+        
+        JPanel statusPanel = new JPanel(new BorderLayout());
+        statusPanel.add(programLine, BorderLayout.WEST);
+        statusPanel.add(programStatus, BorderLayout.CENTER);
+        
+        JPanel programPanel = new JPanel(new BorderLayout());
+        programPanel.add(new JScrollPane(programText), BorderLayout.CENTER);
+        programPanel.add(statusPanel, BorderLayout.SOUTH);
         
         inputText = new InputTextArea();
         inputText.setFont(MONOSPACED);
@@ -535,7 +573,7 @@ public class Main {
         settings.add(Box.createGlue(), gbcLine); // dummy for filling
         
         tabPane = new JTabbedPane();
-        tabPane.addTab("Program", newJScrollPane(programText));
+        tabPane.addTab("Program", programPanel);
         tabPane.addTab("Input/Output", io);
         tabPane.addTab("Log", newJScrollPane(logText));
         tabPane.addTab("Settings", newJScrollPane(settings));
@@ -689,6 +727,40 @@ public class Main {
         runThread = new Thread(new Runnable() {
             @Override
             public void run() {
+                Program.Listener listener = new Program.Adapter() {
+                    private String exception = null;
+                    @Override
+                    public void startProgram(Taxi taxi) {
+                        programStatus.setText("Program is running...");
+                        programStatus.setForeground(null);
+                    }
+                    @Override
+                    public void taxiException(int line, String message) {
+                        if (line > 0) {
+                            try {
+                                int start = programText.getLineStartOffset(line-1);
+                                int end = programText.getLineEndOffset(line-1)-1;
+                                programText.select(start, end);
+                                programText.requestFocusInWindow();
+                            } catch (BadLocationException ex) {
+                                ex.printStackTrace();
+                            }
+                        }
+                        programStatus.setText(message);
+                        programStatus.setForeground(Color.RED);
+                        exception = message;
+                    }
+                    @Override
+                    public void endProgram(Taxi taxi) {
+                        if (exception == null) {
+                            programStatus.setText("The taxi is back in the garage");
+                            programStatus.setForeground(new Color(0, 128, 0));
+                        } else {
+                            programStatus.setText(exception);
+                            programStatus.setForeground(Color.RED);
+                        }
+                    }
+                };
                 try {
                     if (program == null) {
                         compile();
@@ -696,12 +768,14 @@ public class Main {
                     if (program != null) {
                         try {
                             program.addListener(mapPanel.getCar());
+                            program.addListener(listener);
                             program.run();
                         } catch (TaxiException ex) {
                             ex.printStackTrace();
                             inpout.error("%n%s%n%n", ex.getMessage());
                             inpout.log(null, ex.getMessage());
                         } finally {
+                            program.removeListener(listener);
                             program.removeListener(mapPanel.getCar());
                             inputText.reset();
                         }

@@ -165,37 +165,59 @@ public class Program {
         boolean backInGarage = false;
         Timer timer = new Timer();
         try {
+            int last = -1;
             for (int pc = 0; pc < commands.size() && !Thread.currentThread().isInterrupted(); pc++) {
                 Command cmd = commands.get(pc);
                 if (cmd == null)
                     continue;
+                last = cmd.line;
                 if (!(cmd instanceof Label)) {
                     inpout.log(DEBUG, "  gas: %.1f, cred: %.2f, dist: %.1f, %s, %d:%s", 
                         taxi.tank(), taxi.cash()/100.0, taxi.distance(), taxi.location(), cmd.line, cmd);
                 }
-                Result result = cmd.execute(taxi, inpout);
-                executedCount += 1;
-                if (result == null) {
-                    // nothing
-                } else if (result.isEnd()) {
-                    inpout.print("%n%n%s%nProgram complete.%n%n", result.message());
-                    inpout.log(DEBUG, "  back home, lets call it a day");
-                    backInGarage = true;
-                    break;
-                } else {
-                    String name = result.nextLabel();
-                    Integer jump = labels.get(name);
-                    if (jump == null)
-                        throw new TaxiException("no such label [" + name + "]");
-                    pc = jump;
-                    inpout.log(DEBUG, "  switching to \"%s\"(%d)", name, jump);
+                try {
+                    Result result = cmd.execute(taxi, inpout);
+                    executedCount += 1;
+                    if (result == null) {
+                        // nothing
+                    } else if (result.isEnd()) {
+                        inpout.print("%n%n%s%nProgram complete.%n%n", result.message());
+                        inpout.log(DEBUG, "  back home, lets call it a day");
+                        backInGarage = true;
+                        break;
+                    } else {
+                        String name = result.nextLabel();
+                        Integer jump = labels.get(name);
+                        if (jump == null)
+                            throw new TaxiException("no such label [" + name + "]");
+                        pc = jump;
+                        inpout.log(DEBUG, "  switching to \"%s\"(%d)", name, jump);
+                    }
+                } catch (TaxiException ex) {
+                    for (Listener listener : listeners) {
+                        listener.taxiException(cmd.line, ex.getClass().getSimpleName() + ": " + ex.getMessage());
+                    }
+                    throw ex;
                 }
             }
-        } catch (TaxiException ex) {
-            for (Listener listener : listeners) {
-                listener.taxiException(ex);
+            
+            if (Thread.interrupted()) {  // must be cleared else Error in one of the following inpout's
+                inpout.error("INTERRUPTED by user!");
+                inpout.log(null, "%nINTERRUPTED by user!%n");
+            } else {
+                inpout.log(PRINT, "THE END!");
+                if (!backInGarage) {
+                    inpout.error("%nThe boss couldn't find your taxi in the garage.  You're fired!%n%n");
+                    for (Listener listener : listeners) {
+                        listener.taxiException(last, "The boss couldn't find your taxi in the garage");
+                    }
+                } else if (taxi.passengers().size() > 0) {
+                    inpout.error("%nYou still have passengers in your taxi.  You're fired!%n%n");
+                    for (Listener listener : listeners) {
+                        listener.taxiException(last, "You still have passengers in your taxi");
+                    }
+                }
             }
-            throw ex;
         } finally {
             for (Listener listener : listeners) {
                 listener.endProgram(taxi);
@@ -203,15 +225,6 @@ public class Program {
             }
         }
         Times times = timer.times();
-        if (Thread.interrupted()) {  // must be cleared else Error in one of the following inpout's
-            inpout.error("INTERRUPTED by user!");
-            inpout.log(null, "%nINTERRUPTED by user!%n");
-        } else {
-            inpout.log(PRINT, "THE END!");
-            if (!backInGarage) {
-                inpout.error("%nThe boss couldn't find your taxi in the garage.  You're fired!%n%n");
-            }
-        }
         inpout.log(null, "%.2f credits", taxi.cash() / 100.0);
         inpout.log(null, "%.1f gas left in tank", taxi.tank());
         inpout.log(null, "%.1f units travelled", taxi.distance());
@@ -269,8 +282,16 @@ public class Program {
 
         void startProgram(Taxi taxi);
 
-        void taxiException(TaxiException ex);
+        void taxiException(int line, String message);
 
         void endProgram(Taxi taxi);
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    public static class Adapter extends Taxi.Adapter implements Listener {
+        @Override public void startProgram(Taxi taxi) { } 
+        @Override public void taxiException(int line, String message) { } 
+        @Override public void endProgram(Taxi taxi) { }
     }
 }
